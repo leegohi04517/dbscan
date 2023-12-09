@@ -2,3 +2,5 @@ scikit-learn
 pandas
 jieba
 matplotlib
+jupyter
+transformers
