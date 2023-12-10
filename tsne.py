@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 class TSNEDisplayer:
     def show(self, tfidf_matrix, clustering):
-        tfidf_matrix = tfidf_matrix.toarray()[clustering.labels_ != -1]
+        tfidf_matrix = tfidf_matrix[clustering.labels_ != -1]
         labels_filtered = clustering.labels_[clustering.labels_ != -1]
 
         # 使用 t-SNE 进行降维到3维

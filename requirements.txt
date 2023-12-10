@@ -3,4 +3,5 @@ pandas
 jieba
 matplotlib
 jupyter
-transformers
+text2vec
+tqdm

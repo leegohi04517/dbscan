@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class TfidfClz:
-    def word2Vec(self, comment):
+    def text2vec(self, comment):
         data = comment.apply(lambda x: ' '.join(jieba.lcut(x)))
         vectorizer_word = TfidfVectorizer(max_features=800000,
                                           token_pattern=r"(?u)\b\w+\b",
