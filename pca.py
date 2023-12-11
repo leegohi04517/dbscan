@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 class PCADisplayer:
     def show(self, tfidf_matrix, clustering):
-        tfidf_matrix = tfidf_matrix.toarray()[clustering.labels_ != -1]
+        tfidf_matrix = tfidf_matrix[clustering.labels_ != -1]
         labels_filtered = clustering.labels_[clustering.labels_ != -1]
 
         #  设置下最大可展示的行
         # 使用 PCA 进行降维到3维
         pca_3d = PCA(n_components=3)
-        pca_tf_idf_3d = pca_3d.fit_transform(tfidf_matrix.toarray())
+        pca_tf_idf_3d = pca_3d.fit_transform(tfidf_matrix)
 
         # 准备创建3D图
         fig = plt.figure()
